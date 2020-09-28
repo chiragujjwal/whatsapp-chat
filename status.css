@@ -1,0 +1,238 @@
+*{
+    box-sizing: border-box;
+    
+}
+html{
+    font-family: sans-serif;
+    color: #242424;
+}
+body{
+    margin: 0;
+    background-color:burlywood;
+}
+.wrapper{
+    width: 350px;
+    height: 550px;
+    margin: 50px auto;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.5);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    height: 64px;
+    background-color: #32749a;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.7);
+    font-weight: 300;
+    font-size: 20px;
+    display: flex;
+    padding: 0px 20px;
+}
+.content{
+    position: relative;
+    background: #efe7dd url(wallpaper.jpg) repeat;
+    z-index: 0;
+    float: 1;
+    display: flex;
+    flex-direction: column;
+}
+.conversation{
+    flex: 1;
+    margin: 8px;
+}
+.footer{
+    margin: 8px;
+    height: 50px;
+}
+.footer form{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    overflow: hidden;
+    width: 100%;
+    z-index: 2;
+    height: 100%;
+}
+.footer form input{
+    border: 0;
+    flex: 1 1 auto;
+    font-size: 16px;
+    margin: 0 8px 0 0;
+    outline: none;
+    background: #666;
+    height: 100%;
+    padding: 8px;
+    color: azure;
+    box-shadow: #666;
+    border-radius: 25px;
+    text-align: center;
+}
+.send{
+    cursor: pointer;
+    background: #32749a;
+    border-radius: 50%;
+    color: #fff;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+}
+.send:focus{
+    outline: none;
+}
+.message-box{
+    margin: 16px;
+    position: relative;
+}
+.message-box.mine:before{
+    content: '';
+    position: absolute;
+    right: -15px;
+    border: 15px solid;
+    border-color:antiquewhite transparent transparent transparent;
+}
+.message-box.mine:after{
+    content: '';
+    position: absolute;
+    top: 1px;
+    right: -13px;
+    border: 15px solid;
+    border-color:antiquewhite transparent transparent transparent;
+}
+.message-box.incoming:before{
+    content: '';
+    position: absolute;
+    right: -15px;
+    border: 15px solid;
+    border-color: #ddd transparent transparent transparent;
+}
+.message-box.incoming:after{
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: -13px;
+    border: 15px solid;
+    border-color: #ddd transparent transparent transparent;
+}
+.message-box.mine .message{
+    background-color: antiquewhite;
+}
+.message-box.incoming .message:before{
+    font-weight: 500;
+    color: #499b00;
+    margin-bottom: 5px;
+}
+.message{
+    max-width: 210px;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+.sender{
+    font-weight: 500;
+    color: red;
+    margin-bottom: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+}
+.reciever{
+    font-weight: 500;
+    color:lightseagreen;
+    margin-bottom: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+}
+.message-box.mine .message,
+.message-box.mine .message-time{
+    margin-left: auto;
+}
+.message-box.incoming .message{
+    display: flex;
+    flex-direction: column;
+}
+.message-box.incoming .message,
+.message-box.incoming .message-time{
+    margin-right: auto;
+}
+.message-time{
+    padding: 5px 0;
+    color: #777;
+    font-size: 1.3em;
+}
+.type{
+    margin-top: 20px;
+    padding: 5px 5px;
+    position: absolute;
+    font-weight: 10;
+    color: #ddd;
+    margin-left: 40px;
+}
+.profile{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-left: -120px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.head{
+    position: relative;
+    margin-left: 47px;
+    margin-top: 8px;
+    text-transform: uppercase;
+}
+.fa-video{
+    margin-left: 180px;
+    margin-top: 20px;
+    cursor: pointer;
+    text-shadow: 2px 2px 4px #333;
+    font-size: 20px;
+}
+.fa-phone{
+    transform: rotate(100deg);
+    margin-bottom: 10px;
+    margin-left: 12px;
+    cursor: pointer;
+    text-shadow: 2px 2px 4px #333;
+    font-size: 18px;
+}
+.fa-ellipsis-v{
+    margin-left: 40px;
+    margin-top: 20px;
+    cursor: pointer;
+    text-shadow: 2px 2px 4px #333;
+    font-size: 3px;
+}
+.fa-paper-plane{
+    font-size: 20px;
+    text-shadow: 2px 2px 4px #333;
+    cursor: pointer;
+    text-shadow: 2px 2px 4px #333;
+}
+.fa-grin{
+    position: absolute;
+    margin-top: -16px;
+    margin-left: 10px;
+    color: #fff;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px #333;
+    cursor: pointer;
+    font-size: 20px;
+    min-width: 10px;
+}
+.fa-microphone{
+    position: absolute;
+    margin-top: -16px;
+    margin-left: 250px;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    text-shadow: 2px 2px 4px #333;
+}
